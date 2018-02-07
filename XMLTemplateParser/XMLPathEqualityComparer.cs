@@ -4,14 +4,14 @@ using System.Xml.Linq;
 
 namespace XMLTemplateParser
 {
-	class XMLPathEqualityComparer : IEqualityComparer<XElement>
+	class XmlPathEqualityComparer : IEqualityComparer<XElement>
 	{
-		public XMLPathEqualityComparer()
+		public XmlPathEqualityComparer()
 		{
 			_ignoreAttributePredicate = (XAttribute) => false;
 		}
 
-		public XMLPathEqualityComparer(Func<XAttribute, bool> ignoreAttributePredicate)
+		public XmlPathEqualityComparer(Func<XAttribute, bool> ignoreAttributePredicate)
 		{
 			_ignoreAttributePredicate = ignoreAttributePredicate;
 		}
