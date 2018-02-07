@@ -104,9 +104,7 @@ namespace XMLTemplateParser
 					entity.Add(path, value);
 				}
 			}
-		}
-
-		
+		}	
 
 		private readonly Dictionary<string, XAttribute> _templateMap;
 		private readonly XmlTemplateMappingConfiguration _mappingConfig;
