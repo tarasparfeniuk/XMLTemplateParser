@@ -70,4 +70,4 @@ namespace XMLTemplateParser.Examples
 	}
 
 }
-}
+

@@ -82,7 +82,7 @@ namespace XMLTemplateParser
 
 					SetPropertyByPath(
 						listItem,
-						string.Join('.', propertyComponents.Skip(1)),
+						string.Join(".", propertyComponents.Skip(1)),
 						value);
 
 					(entity[nextPropertyName] as List<Dictionary<string, object>>).Add(listItem);
@@ -97,7 +97,7 @@ namespace XMLTemplateParser
 
 				SetPropertyByPath(
 					entity[nextPropertyName] as Dictionary<string, object>,
-					string.Join('.', propertyComponents.Skip(1)),
+					string.Join(".", propertyComponents.Skip(1)),
 					value);
 			}
 			else
