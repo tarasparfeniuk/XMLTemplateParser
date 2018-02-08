@@ -1,12 +1,18 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Linq;
 
-namespace XMLTemplateParser
+using XMLTemplateParser.Configuration;
+using XMLTemplateParser.Mappers;
+using XMLTemplateParser.Util;
+
+namespace XMLTemplateParser.Examples
 {
 	class Program
 	{
 		static void Main(string[] args)
 		{
+			// ------------------------------------------------------------------------------------ //
+			// Create parsing map from template
 			// ------------------------------------------------------------------------------------ //
 
 			var mappingConfig = new XmlTemplateMappingConfiguration("@", ":");
@@ -15,10 +21,16 @@ namespace XMLTemplateParser
 
 			Dictionary<string, XAttribute> map = templateMapBuilder.CreateTemplateMap(xDoc.Root);
 
+			// ------------------------------------------------------------------------------------ //
+			// Parsing document using created map
+			// ------------------------------------------------------------------------------------ //
+
 			var xmlParser = new XmlTemplateParser(map, mappingConfig);
 
 			var entity = xmlParser.ParseDocument(XDocument.Load("doc_test.xml"));
 
+			// ------------------------------------------------------------------------------------ //
+			// Mapping dictionary to concrete entity
 			// ------------------------------------------------------------------------------------ //
 
 			var internalEntity = new Dictionary<string, object>();
@@ -56,4 +68,6 @@ namespace XMLTemplateParser
 		public string Value { get; set; }
 
 	}
+
+}
 }

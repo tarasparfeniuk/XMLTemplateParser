@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
-namespace XMLTemplateParser
+namespace XMLTemplateParser.Configuration
 {
 	public class XmlTemplateMappingConfiguration
 	{

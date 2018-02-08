@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace XMLTemplateParser
+namespace XMLTemplateParser.Mappers
 {
 	public class DictionaryToEntityMapper
 	{

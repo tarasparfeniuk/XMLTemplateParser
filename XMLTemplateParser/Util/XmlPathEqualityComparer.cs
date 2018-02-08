@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Xml.Linq;
 
-namespace XMLTemplateParser
+namespace XMLTemplateParser.Util
 {
 	class XmlPathEqualityComparer : IEqualityComparer<XElement>
 	{

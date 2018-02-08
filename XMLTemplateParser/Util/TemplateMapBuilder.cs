@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Linq;
 
-namespace XMLTemplateParser
+using XMLTemplateParser.Configuration;
+
+namespace XMLTemplateParser.Util
 {
 	public class TemplateMapBuilder
 	{

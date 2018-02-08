@@ -2,6 +2,9 @@
 using System.Linq;
 using System.Xml.Linq;
 
+using XMLTemplateParser.Configuration;
+using XMLTemplateParser.Util;
+
 namespace XMLTemplateParser
 {
 	public class XmlTemplateParser
